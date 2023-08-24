@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div id="name">
+        <h1 id="name1">Clint Reagan</h1>
+      </div>
+      <div id="nav-toggle" class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-items">
+        <li class="nav-item">
+          <a class="nav-link" href="#top" id="homeLink">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="./assets/images/ClintResume.pdf"
+            download="ClintResume"
+            class="resume"
+            >Resume</a
+          >
+          <button class="download"></button>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar">
+      <a
+        href="https://www.linkedin.com/in/michael-reagan-3aa346270/"
+        target="_blank"
+      >
+        <img src="./assets/images/LI-In-Bug.png" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/MCReagan" target="_blank">
+        <img src="./assets/images/github-mark-white.png" alt="GitHub" />
+      </a>
+      <a href="mailto:emparode@gmail.com">
+        <img src="./assets/images/email1.png" alt="Email" />
+      </a>
+    </div>
+
+    <header>
+      <div class="header-container">
+        <div class="intro-container">
+          <h2 class="intro">Hi, I'm Clint.</h2>
+          <h2 class="intro">I design and build websites.</h2>
+        </div>
+        <img src="./assets/images/programmer.png" id="placeholder" />
+      </div>
+    </header>
+
+    <section class="about" id="about">
+      <div class="headshot">
+        <img class="headshot" src="./assets/images/headshot.png" />
+      </div>
+      <div class="about-me">
+        <p class="about-text">
+          With nearly a decade of proven success in dental office management, I
+          excel at setting myself apart through strategic planning, meticulous
+          attention to detail, and a patient-centered ethos. This same
+          dedication now fuels my journey in web development, where I craft
+          distinct online experiences that captivate and outshine the
+          competition.
+        </p>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="projects-container">
+        <div class="project">
+          <a href="https://github.com/Meister7K/TaskMaster-Flex">
+            <div class="image-wrapper">
+              <img src="./assets/images/taskmaster-flex.png" />
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a href="https://github.com/notalisk/goalsy">
+            <div class="image-wrapper">
+              <img src="./assets/images/goalsy.jpg" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    document
+      .querySelector('.nav-link[href="#about"]')
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const aboutSection = document.querySelector("#about");
+
+        window.scrollTo({
+          top: aboutSection.offsetTop,
+          behavior: "smooth",
+        });
+      });
+
+    document
+      .querySelector('.nav-link[href="#projects"]')
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const projectsSection = document.querySelector("#projects");
+
+        window.scrollTo({
+          top: projectsSection.offsetTop + 50,
+          behavior: "smooth",
+        });
+      });
+
+    document
+      .querySelector("#homeLink")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+    history.replaceState({}, document.title, window.location.pathname);
+
+    const navToggle = document.querySelector("#nav-toggle");
+    const navItems = document.querySelector(".nav-items");
+
+    navToggle.addEventListener("click", () => {
+      navItems.classList.toggle("active");
+    });
+
+    const downloadButton = document.querySelector(".download");
+    const resumeLink = document.querySelector(".resume");
+    const resumeFilename = resumeLink.getAttribute("download");
+    const resumeURL = resumeLink.getAttribute("href");
+
+    downloadButton.addEventListener("click", function () {
+      const anchor = document.createElement("a");
+      anchor.style.display = "none";
+      anchor.href = resumeURL;
+      anchor.download = resumeFilename;
+      document.body.appendChild(anchor);
+      anchor.click();
+      document.body.removeChild(anchor);
+    });
+  </script>
+</html>

@@ -1,0 +1,81 @@
+/* CSS Reset */
+
+/* Box sizing border-box for all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+blockquote,
+figure,
+figcaption,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set default font size and line height */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Remove list styles (bullets, indentation) */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove default hyperlink styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove outline on focused elements */
+:focus {
+    outline: none;
+}
+
+/* Optional: Add a CSS reset for form elements */
+input,
+textarea,
+button,
+select {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* Optional: Reset the appearance of form elements on iOS */
+input,
+textarea,
+button,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Optional: Set a default background color */
+body {
+    background-color: #fff;
+}
