@@ -153,19 +153,22 @@
       navItems.classList.toggle("active");
     });
 
-    const downloadButton = document.querySelector(".download");
     const resumeLink = document.querySelector(".resume");
-    const resumeFilename = resumeLink.getAttribute("download");
-    const resumeURL = resumeLink.getAttribute("href");
 
-    downloadButton.addEventListener("click", function () {
-      const anchor = document.createElement("a");
-      anchor.style.display = "none";
-      anchor.href = resumeURL;
-      anchor.download = resumeFilename;
-      document.body.appendChild(anchor);
-      anchor.click();
-      document.body.removeChild(anchor);
+    resumeLink.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const shouldDownload = confirm("Download Resume PDF?");
+
+      if (shouldDownload) {
+        const anchor = document.createElement("a");
+        anchor.style.display = "none";
+        anchor.href = resumeLink.getAttribute("href");
+        anchor.download = resumeLink.getAttribute("download");
+        document.body.appendChild(anchor);
+        anchor.click();
+        document.body.removeChild(anchor);
+      }
     });
   </script>
 </html>
