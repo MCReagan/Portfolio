@@ -231,20 +231,20 @@ header {
 
 .sidebar {
   position: fixed;
-  bottom: 0;
+  bottom: -80px;
   left: 0;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.4);
-  padding: 20px;
+  padding: 12px;
   padding-bottom: 0;
   border-radius: 0 15px 15px 0;
 }
 
 .sidebar a {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   display: block;
 }
 
