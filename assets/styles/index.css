@@ -114,106 +114,6 @@ nav {
   transition: background-color 0.3s ease;
 }
 
-@media screen and (max-width: 1050px) {
-  .nav-items.active .nav-item {
-    color: white;
-  }
-
-  .nav-items {
-    display: none;
-  }
-
-  .nav-toggle {
-    display: block;
-    cursor: pointer;
-  }
-
-  .nav-items.active {
-    display: flex;
-    flex-direction: column;
-    height: 100vw;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 20%;
-    z-index: 1;
-    padding: 0;
-    margin-right: 0px;
-  }
-
-  .nav-link {
-    margin-top: 15px;
-  }
-
-  .nav-link:hover {
-    transform: scale(1.1);
-  }
-
-  .resume {
-    margin-top: 15px;
-  }
-
-  .download {
-    top: 17px;
-  }
-
-  #name {
-    margin: auto;
-  }
-
-  #nav-toggle {
-    margin: auto;
-  }
-
-  #placeholder {
-    max-height: 300px;
-    margin: auto;
-  }
-
-  .intro-container {
-    margin: auto;
-  }
-
-  .intro {
-    font-size: 1.8em !important;
-  }
-
-  .headshot {
-    max-width: 300px;
-  }
-
-  .about-text {
-    font-size: 0.9em;
-  }
-
-  .projects-container {
-    flex-direction: column !important;
-    align-items: center;
-    padding-top: 100px;
-  }
-
-  .project {
-    width: 100% !important;
-    padding: 100px !important;
-    padding-bottom: 50px !important;
-    box-sizing: border-box;
-  }
-
-  .project img {
-    width: 100% !important;
-  }
-
-  .image-wrapper {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  header {
-    padding-top: 200px !important;
-  }
-}
-
 /* header items */
 
 header {
@@ -341,3 +241,174 @@ header {
   transform: scale(1.2);
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content-inner {
+  background-color: black;
+  color: white;
+  padding: 100px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.email-button {
+  margin-top: 15px;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#backButton {
+  margin-top: 15px;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+#backButton:hover {
+  background-color: #ccc;
+}
+
+#email {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 1050px) {
+  .nav-items.active .nav-item {
+    color: white;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-items.active {
+    display: flex;
+    flex-direction: column;
+    height: 100vw;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 20%;
+    z-index: 1;
+    padding: 0;
+    margin-right: 0px;
+  }
+
+  .nav-link {
+    margin-top: 15px;
+  }
+
+  .nav-link:hover {
+    transform: scale(1.1);
+  }
+
+  .resume {
+    margin-top: 15px;
+  }
+
+  .download {
+    top: 17px;
+  }
+
+  #name {
+    margin: auto;
+  }
+
+  #nav-toggle {
+    margin: auto;
+  }
+
+  #placeholder {
+    max-height: 300px;
+    margin: auto;
+  }
+
+  .intro-container {
+    margin: auto;
+  }
+
+  .intro {
+    font-size: 1.8em !important;
+  }
+
+  .headshot {
+    max-width: 300px;
+  }
+
+  .about-text {
+    font-size: 0.9em;
+  }
+
+  .projects-container {
+    flex-direction: column !important;
+    align-items: center;
+    padding-top: 100px;
+  }
+
+  .project {
+    width: 100% !important;
+    padding: 100px !important;
+    padding-bottom: 50px !important;
+    box-sizing: border-box;
+  }
+
+  .project img {
+    width: 100% !important;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  header {
+    padding-top: 200px !important;
+  }
+}

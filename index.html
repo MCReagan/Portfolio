@@ -55,9 +55,24 @@
       <a href="https://github.com/MCReagan" target="_blank">
         <img src="./assets/images/github-mark-white.png" alt="GitHub" />
       </a>
-      <a href="mailto:emparode@gmail.com">
+      <a id="emailButton">
         <img src="./assets/images/email1.png" alt="Email" />
       </a>
+    </div>
+
+    <div id="emailModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <div class="modal-content-inner">
+          <p>
+            <a id="email">emparode@gmail.com</a>
+          </p>
+          <button href="mailto:emparode@gmail.com" class="email-button">
+            Email
+          </button>
+          <button id="backButton">Back</button>
+        </div>
+      </div>
     </div>
 
     <header>
@@ -169,6 +184,27 @@
         anchor.click();
         document.body.removeChild(anchor);
       }
+    });
+
+    const emailButton = document.getElementById("emailButton");
+    const emailModal = document.getElementById("emailModal");
+    const closeModal = document.getElementById("closeModal");
+    const backButton = document.getElementById("backButton");
+
+    emailButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      emailModal.style.display = "block";
+      document.body.style.overflow = "hidden";
+    });
+
+    closeModal.addEventListener("click", function () {
+      emailModal.style.display = "none";
+      document.body.style.overflow = "auto";
+    });
+
+    backButton.addEventListener("click", function () {
+      emailModal.style.display = "none";
+      document.body.style.overflow = "auto";
     });
   </script>
 </html>
