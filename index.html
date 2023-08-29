@@ -68,7 +68,7 @@
             <a id="email">emparode@gmail.com</a>
           </p>
           <button href="mailto:emparode@gmail.com" class="email-button">
-            Email
+            <a href="mailto:emparode@gmail.com">Email</a>
           </button>
           <button id="backButton">Back</button>
         </div>
@@ -196,12 +196,7 @@
       emailModal.style.display = "block";
       document.body.style.overflow = "hidden";
     });
-
-    closeModal.addEventListener("click", function () {
-      emailModal.style.display = "none";
-      document.body.style.overflow = "auto";
-    });
-
+    
     backButton.addEventListener("click", function () {
       emailModal.style.display = "none";
       document.body.style.overflow = "auto";

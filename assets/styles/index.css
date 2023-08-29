@@ -212,6 +212,8 @@ header {
   overflow: hidden;
 }
 
+/* Sidebar */
+
 .sidebar {
   position: fixed;
   bottom: 0;
@@ -239,6 +241,10 @@ header {
 
 .sidebar img:hover {
   transform: scale(1.2);
+}
+
+#emailButton {
+    cursor: pointer;
 }
 
 .modal {
@@ -312,6 +318,8 @@ header {
 #email {
   font-size: 25px;
 }
+
+/* Response */ 
 
 @media screen and (max-width: 1050px) {
   .nav-items.active .nav-item {
