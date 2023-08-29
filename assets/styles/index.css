@@ -14,6 +14,21 @@ body {
   /* box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset; */
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ee345e 5%, #f2b923 90%);
+  border-radius: 5px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
 /* navbar items */
 
 nav {
